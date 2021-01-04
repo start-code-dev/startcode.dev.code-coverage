@@ -5,7 +5,7 @@ code-coverage - php command line tool for analysing phpunit xml code coverage re
 Via Composer
 composer require startcode/code-coverage
 
-#Usage
+# Usage
 Before running code-coverage, run phpunit with --coverage-clover option to generate code-coverage xml file
 
 ./vendor/bin/phpunit --coverage-clover=path/to/code-coverage.xml
@@ -28,12 +28,12 @@ output:
    Statements: 95.58%
    Elements:   94.59%
 
-#Development
+# Development
 Install dependencies
 $ composer install
 
-#Run tests
+# Run tests
 $ composer unit-test
 
-#License
+# License
 (The MIT License) see LICENSE file for details...
