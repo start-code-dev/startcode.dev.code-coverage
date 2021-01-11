@@ -31,13 +31,13 @@
     }
   },
   "require": {
-    "startcode/value-object"    : "dev-main",
+    "php"                       : ">=7.4.0",
+    "startcode/value-object"    : "1.*",
     "vanilla/garden-cli"        : "1.*",
     "questocat/console-color"   : "1.*"
   },
   "require-dev": {
-    "php"                       : ">=7.4.0",
-    "phpunit/phpunit"           : "5.*",
+    "phpunit/phpunit"           : "8.2.*",
     "squizlabs/php_codesniffer" : "3.*"
   },
   "repositories": [
@@ -45,16 +45,16 @@
   ],
   "scripts": {
     "unit-test": [
-      "./vendor/bin/phpunit -c tests/unit/phpunit.xml --coverage-html tests/unit/coverage"
+      "./vendor/bin/phpunit -c tests/unit/phpunit.xml --do-not-cache-result --coverage-html tests/unit/coverage"
     ],
     "test-coverage": [
-      "./vendor/bin/phpunit --colors=always -c tests/unit/phpunit.xml --coverage-text"
+      "./vendor/bin/phpunit --colors=always -c tests/unit/phpunit.xml --do-not-cache-result --coverage-text"
     ],
     "test-report": [
       "./vendor/bin/phpunit --colors=always -c tests/unit/phpunit.xml --coverage-clover=tests/unit/coverage/code-coverage.xml"
     ],
     "code-coverage": [
-      "./bin/code-coverage -p 85 -f tests/unit/coverage/code-coverage.xml"
+      "./bin/code-coverage -p 85 -f tests/unit/fixtures/code-coverage.xml"
     ],
     "psr2": [
       "./vendor/bin/phpcs --colors --standard=PSR2 src/"

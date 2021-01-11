@@ -2,7 +2,8 @@
 
 namespace Startcode\CodeCoverage\Exceptions;
 
-use Startcode\CodeCoverage\{ErrorCodes, ExitCode};
+use Startcode\CodeCoverage\ErrorCodes;
+use Startcode\CodeCoverage\ExitCode;
 
 class InvalidExitCodeException extends \Exception
 {

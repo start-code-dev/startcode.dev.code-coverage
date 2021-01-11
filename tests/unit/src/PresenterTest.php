@@ -4,7 +4,7 @@
 use Startcode\CodeCoverage\{Presenter, Console, Metrics, MetricsFormatter};
 use Startcode\ValueObject\StringLiteral;
 
-class PresenterTest extends PHPUnit_Framework_TestCase
+class PresenterTest extends PHPUnit\Framework\TestCase
 {
 
     /**
@@ -59,7 +59,7 @@ class PresenterTest extends PHPUnit_Framework_TestCase
         $this->presenterMock->stdOut();
     }
 
-    protected function setUp()
+    protected function setUp() : void
     {
         $this->metricsMock = $this->getMockBuilder(Metrics::class)
             ->disableOriginalConstructor()
@@ -81,7 +81,7 @@ class PresenterTest extends PHPUnit_Framework_TestCase
             ->getMock();
     }
 
-    protected function tearDown()
+    protected function tearDown() : void
     {
         $this->metricsMock              = null;
         $this->consoleMock              = null;

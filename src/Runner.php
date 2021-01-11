@@ -3,7 +3,8 @@
 namespace Startcode\CodeCoverage;
 
 use Questocat\ConsoleColor\ConsoleColor;
-use Startcode\ValueObject\{IntegerNumber, RealPath};
+use Startcode\ValueObject\IntegerNumber;
+use Startcode\ValueObject\RealPath;
 use Garden\Cli\Args;
 
 class Runner

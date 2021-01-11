@@ -4,7 +4,7 @@
 use Startcode\CodeCoverage\Console;
 use Questocat\ConsoleColor\ConsoleColor;
 
-class ConsoleTest extends PHPUnit_Framework_TestCase
+class ConsoleTest extends PHPUnit\Framework\TestCase
 {
 
     public function testConstruct()
@@ -13,6 +13,6 @@ class ConsoleTest extends PHPUnit_Framework_TestCase
             ->disableOriginalConstructor()
             ->getMock();
 
-        new Console($consoleColorMock);
+        $this->assertInstanceOf(Console::class, new Console($consoleColorMock));
     }
 }

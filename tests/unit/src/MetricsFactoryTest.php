@@ -3,7 +3,7 @@
 use Startcode\ValueObject\IntegerNumber;
 use Startcode\CodeCoverage\{MetricsFactory, Metrics};
 
-class MetricsFactoryTest extends PHPUnit_Framework_TestCase
+class MetricsFactoryTest extends PHPUnit\Framework\TestCase
 {
 
     /**
@@ -26,7 +26,7 @@ class MetricsFactoryTest extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf(Metrics::class, $this->metricsFactory->create());
     }
 
-    protected function setUp()
+    protected function setUp() : void
     {
         $data = '<?xml version="1.0" encoding="UTF-8"?>
             <coverage generated="1508761703">
@@ -43,7 +43,7 @@ class MetricsFactoryTest extends PHPUnit_Framework_TestCase
         $this->metricsFactory   = new MetricsFactory($this->metricsData, $this->requiredPercentageMock);
     }
 
-    protected function tearDown()
+    protected function tearDown() : void
     {
         $this->requiredPercentageMock   = null;
         $this->metricsData              = null;

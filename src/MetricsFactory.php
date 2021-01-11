@@ -2,7 +2,8 @@
 
 namespace Startcode\CodeCoverage;
 
-use Startcode\ValueObject\{Dictionary, IntegerNumber};
+use Startcode\ValueObject\Dictionary;
+use Startcode\ValueObject\IntegerNumber;
 
 class MetricsFactory
 {

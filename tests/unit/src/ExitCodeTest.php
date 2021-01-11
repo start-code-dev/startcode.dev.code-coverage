@@ -4,7 +4,7 @@
 use Startcode\CodeCoverage\ExitCode;
 use Startcode\CodeCoverage\Exceptions\InvalidExitCodeException;
 
-class ExitCodeTest extends PHPUnit_Framework_TestCase
+class ExitCodeTest extends PHPUnit\Framework\TestCase
 {
 
     public function testError()

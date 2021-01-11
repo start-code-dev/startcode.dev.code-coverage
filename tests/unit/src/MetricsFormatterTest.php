@@ -4,7 +4,7 @@
 use Startcode\CodeCoverage\{MetricsData, MetricsFormatter, Metrics};
 use Startcode\ValueObject\IntegerNumber;
 
-class MetricsFormatterTest extends PHPUnit_Framework_TestCase
+class MetricsFormatterTest extends PHPUnit\Framework\TestCase
 {
 
     /**
@@ -40,7 +40,7 @@ class MetricsFormatterTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('   Elements:   54.00% ', $data[3]);
     }
 
-    protected function setUp()
+    protected function setUp() : void
     {
         $this->requiredPercentageMock = $this->getMockBuilder(IntegerNumber::class)
             ->disableOriginalConstructor()
@@ -60,7 +60,7 @@ class MetricsFormatterTest extends PHPUnit_Framework_TestCase
         $this->metricsFormatter = new MetricsFormatter($this->metrics);
     }
 
-    protected function tearDown()
+    protected function tearDown() : void
     {
         $this->requiredPercentageMock   = null;
         $this->metricsDataMock          = null;

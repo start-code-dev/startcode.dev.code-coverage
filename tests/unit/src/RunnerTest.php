@@ -3,7 +3,7 @@
 use Garden\Cli\Args;
 use Startcode\CodeCoverage\{Runner, Reader, Metrics, Presenter};
 
-class RunnerTest extends PHPUnit_Framework_TestCase
+class RunnerTest extends PHPUnit\Framework\TestCase
 {
 
     /**
@@ -80,7 +80,7 @@ class RunnerTest extends PHPUnit_Framework_TestCase
         $runnerMock->run();
     }
 
-    protected function setUp()
+    protected function setUp() : void
     {
         $this->argsMock = $this->getMockBuilder(Args::class)
             ->disableOriginalConstructor()
@@ -89,7 +89,7 @@ class RunnerTest extends PHPUnit_Framework_TestCase
         $this->runner = new Runner($this->argsMock);
     }
 
-    protected function tearDown()
+    protected function tearDown() : void
     {
         $this->argsMock = null;
         $this->runner   = null;
